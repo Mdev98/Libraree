@@ -1,0 +1,26 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+    {% regroup books by types as categories %}
+    <section class="home_page">
+        {% for category in categories %}
+        <div class="category">
+            <span class="category_name">
+                {{category.grouper}}
+            </span>
+            <div class="books">
+                {% for book in category.list %}
+                <div class="book">
+                    <div class="book_cover">
+                       <a href="{% url 'book-detail' book.id %}"><img src="{{book.cover.url}}" alt="cover"></a>
+                    </div>
+                    
+                    <span class="book_title">{{book.title}}</span>
+                    <span class="book_autor">{{book.autors}}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+{% endblock %}

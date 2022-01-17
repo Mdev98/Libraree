@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&family=Pushster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'books/css/style.css' %}" />
+    <title>Libraree | Your online library</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">Libraree.</a>
+        </div>
+        <nav>
+            <ul class="links">
+                <li class="link"><a href="/home">Home</a></li>
+                <li class="link"><a href="/books">Books</a></li>
+                <li class="link"><a href="/books/mylist">My List</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <a href="#" class="btn btn_sign-in">Sign in</a>
+            <a href="#" class="btn btn_sign-up">Sign up</a>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+</body>
+</html>

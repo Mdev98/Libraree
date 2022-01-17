@@ -1,0 +1,22 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+    <section class="book_detail">
+        <div class="book_cover">
+            <img src="{{book.cover.url}}" alt="cover">
+        </div>
+        <div class="book_info">
+            <span class="book_title">{{book.title}}</span>
+            <span class="book_autor">{{book.autors}}</span>
+            <span class="book_page"><strong>PAGES : </strong>{{book.pages}}</span>
+            <span class="book_edition"><strong>EDITION : </strong>{{book.edition.name}}</span>
+            <span class="book_pub"><strong>PUBLICATION : </strong>{{book.edition.publish_date}}</span>
+        </div>
+        <div class="add_to_list">
+            <form method="post">
+                {% csrf_token %}
+                <input type="submit" value="Add Mylist" class="btn btn_submit">
+            </form>
+        </div>
+    </section>
+{% endblock %}

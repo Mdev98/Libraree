@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Poppins'; 
+    background-color: hsla(21, 83%, 79%, 0.356);
+}
+
+a {
+    color: #111;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header > * {
+    flex: 1;
+    height: 100%;
+}
+
+nav {
+    flex: 5;
+}
+
+.links {
+    height: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+.link {
+    font-size: 1.3rem;
+    margin-right: 50px;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    background-color: #ff8c00;
+    transform-origin: left;
+    transform: scaleX(0.2);
+    transition: all 0.2s ease-out;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-family: 'Pushster';
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+}
+
+.btn_sign-in {
+    background-color: transparent;
+
+}
+
+.btn_sign-up {
+    background-color: #FF8E00;
+    color: #fff;
+}
+
+/* ===== END ===== */
+
+/* ===== LANDING PAGE ===== */
+
+.landing_page {
+    width: 100%;
+    height: calc(100vh - 110px);
+    padding: 40px 80px;
+    display: flex;
+}
+
+.landing_page > *{
+    flex: 1;
+}
+
+.landing_page-left {
+    display: flex;
+    align-items: center;
+}
+
+.landing_page-left h1 {
+    font-size: 8rem;
+}
+
+.landing_page-left span {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.search_bar {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.search_bar input[type="text"] {
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 0px 20px;
+    font-size: 1.2rem;
+}
+
+.btn_search {
+    width: 30%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    background-color: #FF8E00;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.landing_page-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== END ===== */
+
+/* ==== HOME PAGE ==== */
+
+.home_page {
+    padding: 40px;
+}
+
+.category_name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.category_name::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    background-color: #ff8c00;
+    transform-origin: left;
+    transform: scaleX(0.4);
+    transition: all 0.2s ease-out;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    /* grid-template-rows: 1fr 1fr; */
+}
+
+.book {
+    width: fit-content;
+    margin-right: 100px;
+    padding: 10px; 
+    border-radius: 20px;
+    transition: all .3s ease-in;  
+}
+
+.book:hover {
+    background-color: #ff8c00;
+}
+
+.book > * {
+    display: block;
+}
+
+.book_cover {
+    width: fit-content;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+.book_cover img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.book_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.book_autor {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* ==== BOOK_LIST ==== */
+
+.book_list {
+    padding: 40px;
+}
+
+/* ==== END ==== */
+
+/* ==== BOOK_DETAIL ==== */
+
+.book_detail {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_info span {
+    display: block;
+}
+
+.book_info .book_title {
+    font-size: 3rem;
+}
+
+.btn_submit {
+    margin-top: 20px;
+    background-color: #ff8c00;
+    color: #fff;
+}
+/* ==== END ==== */
+
+/* ==== MY LIST ==== */
+
+.titre {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.titre::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    background-color: #ff8c00;
+    transform-origin: left;
+    transform: scaleX(0.4);
+    transition: all 0.2s ease-out;
+}

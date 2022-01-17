@@ -1,0 +1,28 @@
+
+{% extends 'books/base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="landing_page" class="landing_page">
+    <div class="landing_page-left">
+        <div class="wrapper">
+            <h1>Online library</h1>
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel architecto deserunt minus quas quam a molestias error cum consectetur, <br> blanditiis amet accusamus ipsa iusto exercitationem maxime quo voluptatem placeat excepturi.
+            </span>
+            <form method="post">
+            <div class="search_bar">
+                <input type="text" placeholder="Find your book here">
+                <input type="submit" value="Search Book" class="btn btn_search">
+            </div>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="landing_page-right">
+        <img src="{% static 'books/image/books.png' %}" alt="My image">
+    </div>
+</section>
+
+{% endblock %}

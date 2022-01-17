@@ -1,0 +1,21 @@
+
+
+{% extends 'books/base.html' %}
+
+{% block content %}
+    <section class="book_list">
+        <div class="books">
+            {% for book in books%}
+                <div class="book">
+                    <div class="book_cover">
+                        <a href="{% url 'book-detail' book.id %}"><img src="{{book.cover.url}}" alt="cover"></a>
+                    </div>
+                    <span class="book_title">{{book.title}}</span>
+                    <span class="book_autor">{{book.autors}}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+        
+    
+{% endblock %}
